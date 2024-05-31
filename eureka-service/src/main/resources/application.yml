@@ -1,0 +1,9 @@
+server:
+  port: 8065
+spring:
+  application:
+    name: eurekaservice
+eureka:
+  client:
+    service-url: #????(???????????????eureka)
+      defaultZone: http://127.0.0.1:8065/eureka

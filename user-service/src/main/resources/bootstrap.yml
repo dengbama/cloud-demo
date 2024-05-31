@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: userService
+  profiles:
+    active: dev #环境
+  cloud:
+    nacos:
+#      discovery:
+#        namespace: 950952ca-8281-4b9b-92a0-087408b46e23
+#        cluster-name: CQ
+      server-addr: localhost:8899
+      config:
+#        file-extension: yaml #文件名
+        # 特定配置文件
+        extension-configs:
+          - data-id: userService-dev.yaml
+            refresh: true
+        # 共享配置文件
+        shared-configs:
+          - data-id: userService.yaml
+            refresh: true
+
